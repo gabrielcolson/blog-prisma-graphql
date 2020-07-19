@@ -1,0 +1,28 @@
+{
+  "name": "blog-prisma-graphql",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "ts-node src/index.ts",
+    "generate": "npm run generate:prisma && npm run generate:nexus",
+    "generate:prisma": "prisma generate",
+    "generate:nexus": "ts-node --transpile-only src/schema/index.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^14.0.23",
+    "ts-node": "^8.10.2",
+    "typescript": "^3.9.7"
+  },
+  "dependencies": {
+    "@nexus/schema": "^0.14.0",
+    "apollo-server": "^2.16.0",
+    "graphql": "^14.7.0",
+    "nexus-plugin-prisma": "^0.16.1",
+    "slugify": "^1.4.4"
+  }
+}
